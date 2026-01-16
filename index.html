@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head><title>Opening TikTok...</title></head>
-<body style="background:black; color:white; text-align:center; padding-top:50px;">
-    <p>Redirecting to the TikTok App...</p>
-    <script>
-        // This is the "Universal" way that iPadOS 15+ prefers
-        var appLink = "https://www.tiktok.com";
-        
-        // Try to force the app switch
-        window.location.replace("snssdk1233://user/profile/nicolashernandez-afk");
-
-        // If it doesn't open in 1 second, it will just go to the web profile 
-        // as a backup instead of showing an "Invalid Address" error.
-        setTimeout(function() {
-            window.location.href = appLink;
-        }, 1000);
-    </script>
+<head>
+    <title>View Content</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #000; }
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+    <!-- This embeds a specific video or profile in a way that feels like an app -->
+    <iframe src="https://www.tiktok.com"></iframe>
 </body>
 </html>
