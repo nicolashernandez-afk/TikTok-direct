@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head><title>Redirecting</title></head>
-<body style="background:black">
+<head><title>Opening TikTok...</title></head>
+<body style="background:black; color:white; text-align:center; padding-top:50px;">
+    <p>Redirecting to the TikTok App...</p>
     <script>
-        // Try the universal "musically" scheme (works better on iPadOS)
-        window.location.replace("musically://user?screen_name=nicolashernandez-afk");
+        // This is the "Universal" way that iPadOS 15+ prefers
+        var appLink = "https://www.tiktok.com";
+        
+        // Try to force the app switch
+        window.location.replace("snssdk1233://user/profile/nicolashernandez-afk");
 
-        // If that fails, try the secondary internal scheme
+        // If it doesn't open in 1 second, it will just go to the web profile 
+        // as a backup instead of showing an "Invalid Address" error.
         setTimeout(function() {
-            window.location.replace("snssdk1128://user/profile/nicolashernandez-afk");
-        }, 500);
+            window.location.href = appLink;
+        }, 1000);
     </script>
 </body>
 </html>
